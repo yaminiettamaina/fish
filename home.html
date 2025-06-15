@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fish Info - Home</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to Fish Info</h1>
+    <p>Select a fish to learn more about it.</p>
+
+    <select id="fishSelect">
+      <option value="">-- Choose a Fish --</option>
+      <option value="salmon">Salmon</option>
+      <option value="tuna">Tuna</option>
+      <option value="goldfish">Goldfish</option>
+    </select>
+
+    <button onclick="goToDetails()">Show Details</button>
+  </div>
+
+  <script>
+    function goToDetails() {
+      const selectedFish = document.getElementById("fishSelect").value;
+      if (selectedFish) {
+        window.location.href = `details.html?fish=${selectedFish}`;
+      } else {
+        alert("Please select a fish.");
+      }
+    }
+  </script>
+</body>
+</html>

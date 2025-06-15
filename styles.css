@@ -1,0 +1,160 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Body Styles */
+body {
+  background: linear-gradient(135deg, #4caf50, #81c784);
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  padding: 20px;
+  flex-direction: column;
+}
+
+/* Shared Container */
+.container {
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.container:hover {
+  transform: scale(1.02);
+}
+
+/* Wider container for details page */
+body.details-page .container {
+  width: 90%;
+  max-width: 1200px;
+  text-align: left;
+}
+
+/* Headings */
+h1, h2 {
+  margin-bottom: 20px;
+  color: #1976d2;
+  font-size: 2em;
+}
+
+/* Text and Inputs */
+p {
+  margin-bottom: 20px;
+  font-size: 1.1em;
+  color: #555;
+}
+
+input[type="text"],
+input[type="password"],
+select {
+  width: 100%;
+  padding: 12px;
+  margin: 15px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1em;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+select:focus {
+  border-color: #1976d2;
+  outline: none;
+  box-shadow: 0 0 8px rgba(25, 118, 210, 0.3);
+}
+
+/* Button Styles */
+button {
+  background: #1976d2;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #1565c0;
+}
+
+button:active {
+  background-color: #0d47a1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+    width: 90%;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  button {
+    font-size: 1em;
+    padding: 12px 25px;
+  }
+
+  #fishDetails {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #fishDetails img {
+    max-width: 100%;
+  }
+
+  #fishDetails .text-container {
+    padding: 10px 0;
+    text-align: center;
+  }
+}
+
+/* Fish Info Page Layout */
+#fishDetails {
+  display: flex;
+  align-items: flex-start;
+  padding: 30px;
+  gap: 20px;
+}
+
+#fishDetails img {
+  max-width: 300px;
+  height: auto;
+  border-radius: 12px;
+}
+
+#fishDetails .text-container {
+  flex: 1;
+  padding: 10px;
+}
+
+#fishDetails h2 {
+  font-size: 2em;
+  margin-bottom: 15px;
+  color: #1976d2;
+}
+
+#fishDetails p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #333;
+}
